@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "The Joel Hilton Film Collection";
+    ViewBag.h1 = "Archived Movies";
+}
+
+
+@model IEnumerable<IS_413_Assignment_3.Models.NewMovieModel>
+
+@*Make a table for the list of movies entered*@
+<div class="container">
+    <table id="customers">
+        <thead>
+            <tr>
+                <th>Category</th>
+                <th>Movie Title</th>
+                <th>Year Released</th>
+                <th>Director</th>
+                <th>Rating</th>
+                <th>Edited</th>
+                <th>Lent To</th>
+                <th>Notes</th>
+            </tr>
+        </thead>
+
+        @*Use razor code to make bring in the new movies from the model.
+          Also use a foreach to loop through all of the movies added to print them out*@
+        <tbody>
+            @foreach (IS_413_Assignment_3.Models.NewMovieModel x in Model)
+            {
+                <tr>
+                    <td>@x.Category</td>
+                    <td>@x.Title</td>
+                    <td>@x.Year</td>
+                    <td>@x.Director</td>
+                    <td>@x.Rating</td>
+                    <td>@x.Edited</td>
+                    <td>@x.LentTo</td>
+                    <td>@x.Notes</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

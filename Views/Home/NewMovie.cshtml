@@ -1,0 +1,59 @@
+﻿@{
+    ViewData["Title"] = "The Joel Hilton Film Collection";
+    ViewBag.h1 = "New Movie Entry";
+}
+
+@model IS_413_Assignment_3.Models.NewMovieModel
+
+@*Make a New Movie input form and add all of the headings from the excel document
+    -be sure to add asp-for to not only the box but also the words
+    -make the rating a drop down box
+    -make the edited a boolean
+    -add the validation summary to the bottom*@
+
+<form asp-action="NewMovie" method="post">
+    <fieldset class="fieldset-auto-width">
+        <legend>Add A New Movie</legend>
+
+        <label asp-for="Category">Category:</label>
+        <input asp-for="Category"><br><br>
+
+        <label asp-for="Title">Movie Title:</label>
+        <input asp-for="Title"><br><br>
+
+        <label asp-for="Year">Year Released:</label>
+        <input asp-for="Year"><br><br>
+
+        <label asp-for="Director">Director:</label>
+        <input asp-for="Director"><br><br>
+
+        <label asp-for="Rating">Rating:</label>
+        <select asp-for="Rating">
+            <option value="">Select One</option>
+            <option value="G">G</option>
+            <option value="PG">PG</option>
+            <option value="PG-13">PG-13</option>
+            <option value="R">R</option>
+        </select>
+        <br><br>
+
+        <label asp-for="Edited">Edited:</label>
+        <select asp-for="Edited">
+            <option value="">Select One</option>
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+        </select><br><br>
+
+        <label asp-for="LentTo">Lent To:</label>
+        <input asp-for="LentTo"><br><br>
+
+        <label asp-for="Notes">Notes:</label>
+        <input asp-for="Notes"><br><br>
+
+        <center>
+            <input type="submit" value="Add New Movie" id="submit" name="submit" />
+        </center>
+
+    </fieldset>
+    <div asp-validation-summary="All"></div>
+</form>
