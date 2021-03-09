@@ -42,9 +42,11 @@ namespace IS_413_Assignment_3.Controllers
         public IActionResult NewMovie(NewMovieModel model)
         {
             //ensure the inputs are validated
+
             if (ModelState.IsValid)
             {
-                //class, method, parameters
+                //class, method, parameters. this adds a new moviemodel instance to the list!
+
                 ArchiveModel.AddMovie(model);
 
                 return View("Archive", ArchiveModel.AMovies.Where(model => model.Title != "Independence Day"));
