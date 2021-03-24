@@ -6,8 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.EntityFrameworkCore.Sqlite;
-using Microsoft.EntityFrameworkCore.Scaffolding;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,6 +32,7 @@ namespace IS_413_Assignment_3
             {
                 options.UseSqlite(Configuration["ConnectionStrings:MovieArchiveConnection"]);
             });
+           
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
