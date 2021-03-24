@@ -59,7 +59,7 @@ namespace IS_413_Assignment_3
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=NewMovies}/{action=Create}/{id?}");
             });
         }
     }
