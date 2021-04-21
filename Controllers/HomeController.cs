@@ -39,7 +39,7 @@ namespace IS_413_Assignment_3.Controllers
 
         //post movie form that contains the model and doesn't show Independence day when directed to the list of movies in Archive.
         [HttpPost]
-        public IActionResult NewMovie(NewMovieModel model)
+        public IActionResult NewMovie(NewMovie model)
         {
             //ensure the inputs are validated
 

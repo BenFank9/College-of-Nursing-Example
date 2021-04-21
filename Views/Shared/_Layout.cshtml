@@ -12,7 +12,7 @@
 </head>
 
 
-<body>
+<body style="background-color:aliceblue">
     <header>
         @*Give the site navigation for each page on the site using asp-controller and asp-action*@
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
@@ -31,11 +31,12 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="MyPodcasts">My Podcasts</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="NewMovie">New Movie</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="NewMovies" asp-action="Index">Movie Archive</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Archive">Archive</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="NewMovies" asp-action="Create">Create New Movie</a>
                         </li>
+
                     </ul>
                 </div>
             </div>

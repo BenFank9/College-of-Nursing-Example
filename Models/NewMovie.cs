@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace IS_413_Assignment_3.Models
 {
-    public class NewMovieModel
+    public class NewMovie
     {
+        [Key]
+        public int NewMovieId { get; set; }
         //Categories are required
         [Required]
         public string Category { get; set; }
